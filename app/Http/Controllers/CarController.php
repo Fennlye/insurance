@@ -15,6 +15,10 @@ class CarController extends Controller
         return view('cars.create', compact('owners'));
     }
 
+    public function show(Car $car){
+        return $car;
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
